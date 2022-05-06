@@ -1,0 +1,1424 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
+    
+    
+      
+        <title>Quickstart end-to-end DoubleCloud services guide - DoubleCloud Test</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e411adfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quickstart-end-to-end-doublecloud-services-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DoubleCloud Test" class="md-header__button md-logo" aria-label="DoubleCloud Test" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DoubleCloud Test
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quickstart end-to-end DoubleCloud services guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to Dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to Dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to Light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to Light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yadc-io/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    DoubleCloud Docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DoubleCloud Test" class="md-nav__button md-logo" aria-label="DoubleCloud Test" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DoubleCloud Test
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yadc-io/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    DoubleCloud Docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Welcome to MkDocs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Quickstart end-to-end DoubleCloud services guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Quickstart end-to-end DoubleCloud services guide
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-to-acquire-the-data" class="md-nav__link">
+    Prepare to acquire the data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-clickhouse-cluster" class="md-nav__link">
+    Create a Managed ClickHouse Cluster
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a Managed ClickHouse Cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-clickhouse-database" class="md-nav__link">
+    Create a ClickHouse database
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfer-the-data" class="md-nav__link">
+    Transfer the data
+  </a>
+  
+    <nav class="md-nav" aria-label="Transfer the data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-source-endpoint" class="md-nav__link">
+    Create a source endpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-target-endpoint" class="md-nav__link">
+    Create a target endpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-and-activate-a-transfer" class="md-nav__link">
+    Create and activate a transfer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualize-the-data" class="md-nav__link">
+    Visualize the data
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualize the data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-workbook" class="md-nav__link">
+    Create a workbook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-connection" class="md-nav__link">
+    Create a connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-dataset" class="md-nav__link">
+    Create a dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-your-dataset-for-visualization" class="md-nav__link">
+    Prepare your dataset for visualization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-dashboard" class="md-nav__link">
+    Create a dashboard
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-charts-and-selectors" class="md-nav__link">
+    Create charts and selectors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-area-chart" class="md-nav__link">
+    Create an area chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-bar-chart" class="md-nav__link">
+    Create a bar chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-indicator" class="md-nav__link">
+    Create an indicator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-selector" class="md-nav__link">
+    Add a selector
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-to-acquire-the-data" class="md-nav__link">
+    Prepare to acquire the data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-clickhouse-cluster" class="md-nav__link">
+    Create a Managed ClickHouse Cluster
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a Managed ClickHouse Cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-clickhouse-database" class="md-nav__link">
+    Create a ClickHouse database
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfer-the-data" class="md-nav__link">
+    Transfer the data
+  </a>
+  
+    <nav class="md-nav" aria-label="Transfer the data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-source-endpoint" class="md-nav__link">
+    Create a source endpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-target-endpoint" class="md-nav__link">
+    Create a target endpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-and-activate-a-transfer" class="md-nav__link">
+    Create and activate a transfer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualize-the-data" class="md-nav__link">
+    Visualize the data
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualize the data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-workbook" class="md-nav__link">
+    Create a workbook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-connection" class="md-nav__link">
+    Create a connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-dataset" class="md-nav__link">
+    Create a dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-your-dataset-for-visualization" class="md-nav__link">
+    Prepare your dataset for visualization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-dashboard" class="md-nav__link">
+    Create a dashboard
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-charts-and-selectors" class="md-nav__link">
+    Create charts and selectors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-area-chart" class="md-nav__link">
+    Create an area chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-bar-chart" class="md-nav__link">
+    Create a bar chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-indicator" class="md-nav__link">
+    Create an indicator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-selector" class="md-nav__link">
+    Add a selector
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/yadc-io/docs/edit/master/docs/quickstart.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  
+
+
+
+<h1 id="quickstart-end-to-end-doublecloud-services-guide">Quickstart end-to-end DoubleCloud services guide</h1>
+<p>This step-by-step quickstart will walk you through every major DoubleCloud resource. You will familiarize yourself with how to create, manage and make practical use of the resources in your brand new data management toolkit.</p>
+<p>A typical use case for our service includes:</p>
+<ul>
+<li>Creating a cluster and a database for data storage.</li>
+<li>Transferring the data from the outside source to a DoubleCloud cluster.</li>
+<li>Analyzing the data using Visualization, our built-in BI tool.</li>
+</ul>
+<p>You can see a flow of such a case in the following diagram:</p>
+<p><img alt="quickstart-flow" src="_assets/doublecloud-e2e-quickstart/../_use-cases/doublecloud-e2e-quickstart/dc-e2e-quickstart-flow.png" title="Quickstart flow diagram" /></p>
+<p>There is a CSV file with some data we need to visualize and analyze. To do this, we transfer the file from S3 to a ClickHouse cluster. From there, we connect our Visualization service to it, prepare the data for visualization and build some impressive graphics from it.</p>
+<p>Following this straightforward step-by-step quickstart tutorial, you will learn how to:</p>
+<ol>
+<li>
+<p><a href="#prepare-to-acquire-the-data">Prepare to acquire the data</a></p>
+</li>
+<li>
+<p><a href="#create-clickhouse-cluster">Create a Managed ClickHouse cluster</a></p>
+</li>
+<li>
+<p><a href="#create-clickhouse-database">Create a ClickHouse database</a></p>
+</li>
+<li>
+<p><a href="#transfer-the-data">Transfer the data</a></p>
+</li>
+<li>
+<p><a href="#create-a-source-endpoint">Create a source endpoint</a></p>
+</li>
+<li>
+<p><a href="#create-a-target-endpoint">Create a target endpoint</a></p>
+</li>
+<li>
+<p><a href="#create-and-activate-a-transfer">Create and activate a transfer</a></p>
+</li>
+<li>
+<p><a href="#visualize-the-data">Visualize the data</a></p>
+</li>
+<li>
+<p><a href="#create-a-workbook">Create a workbook</a></p>
+</li>
+<li>
+<p><a href="#create-a-connection">Create a connection</a></p>
+</li>
+<li>
+<p><a href="#create-a-dataset">Create a dataset</a></p>
+</li>
+<li>
+<p><a href="#prepare-your-dataset-for-visualization">Prepare your dataset for visualization</a></p>
+</li>
+<li>
+<p><a href="#create-a-dashboard">Create a dashboard</a></p>
+</li>
+<li>
+<p><a href="#create-charts-and-selectors">Create charts and selectors</a></p>
+</li>
+<li>
+<p><a href="#create-an-area-chart">Create and area chart</a></p>
+</li>
+<li>
+<p><a href="#create-a-bar-chart">Create a bar chart</a></p>
+</li>
+<li>
+<p><a href="#create-an-indicator">Create an indicator</a></p>
+</li>
+<li>
+<p><a href="#add-a-selector">Add a selector</a></p>
+</li>
+</ol>
+<p>Keeping in mind your time, let's get to the point right now.</p>
+<h2 id="prepare-to-acquire-the-data">Prepare to acquire the data</h2>
+<p>The first things you need to do are to create a cluster and a database that will store the data for further processing and visualization.</p>
+<p>You need to complete the following steps:</p>
+<ol>
+<li><a href="#create-clickhouse-cluster">Create a Managed ClickHouse cluster</a></li>
+</ol>
+<p>This is a resource allocation tool. It allows you to acquire CPU, memory and storage quotas to operate your databases.</p>
+<ol>
+<li><a href="#create-clickhouse-database">Create a ClickHouse database</a></li>
+</ol>
+<p>This section will give you the understanding of how to talk to your cluster directly from the Linux terminal and use ClickHouse CLI toolkit.</p>
+<ol>
+<li><a href="#configure-allow-list">Configure your ClickHouse cluster's allow list</a></li>
+</ol>
+<p>This is your access management tool. It allows you to allow and block access to the data and resources on your cluster.</p>
+<h2 id="create-clickhouse-cluster">Create a Managed ClickHouse Cluster</h2>
+<p>{% include notitle <a href="_includes/managed-clickhouse/preview-stage-warning.md">quota-warning</a> %}</p>
+<ol>
+<li>
+<p>Go to the <a href="https://app.double.cloud">console</a>.</p>
+</li>
+<li>
+<p>Select <strong>Clusters</strong> from the list of services on the left.</p>
+</li>
+<li>
+<p>Click <strong>Create cluster</strong> in the upper-right corner of the page.</p>
+</li>
+<li>
+<p>Select <strong>ClickHouse</strong>.</p>
+</li>
+<li>
+<p>Choose a provider and a region closest to your geographical location.</p>
+</li>
+<li>
+<p>Under <strong>Resources</strong>:</p>
+<ul>
+<li>Select a preset for CPU, RAM capacity and storage space. The first <code>s1-c2-m8</code> preset will be more than enough for our tutorial.</li>
+<li>Select <code>2</code> replicas to improve performance.</li>
+<li>Select <code>2</code> shards to improve fault tolerance.</li>
+</ul>
+</li>
+<li>
+<p>Under <strong>Basic settings</strong>:</p>
+</li>
+<li>
+<p>Enter the cluster <strong>Name</strong>: <code>doublecloud-quickstart</code>.</p>
+</li>
+<li>
+<p>Keep the <strong>Version</strong> as is - this is the latest stable version of ClickHouse.</p>
+</li>
+<li>
+<p>Click <strong>Submit</strong>.</p>
+</li>
+</ol>
+<p>Your cluster will appear with the <code>Creating</code> status on the <strong>Clusters</strong> page in the console. Setting everything up may take some time.</p>
+<ol>
+<li>When the cluster is ready to operate, its state in the console will change to <code>Alive</code>.</li>
+</ol>
+<details class="note" open="open">
+<summary>Username and password info:</summary>
+<p>The superuser <code>admin</code> and its password are created automatically. You can find both the <strong>User</strong> and the <strong>Password</strong> in the <strong>Overview</strong> tab on the cluster page.</p>
+</details>
+<h3 id="create-clickhouse-database">Create a ClickHouse database</h3>
+<p>This step gives you a glimpse into talking with your Managed ClickHouse cluster directly from your Linux system.</p>
+<p>Please note - this tutorial is based on a <a href="https://en.wikipedia.org/wiki/List_of_Linux_distributions#DEB-based">DEB-based Linux distribution <img alt="external link" src="../_assets/external-link.svg" /></a>. You can use a standalone system or a <a href="https://www.microsoft.com/store/productId/9N6SVWS3RX71">Windows Subsystem for Linux <img alt="external link" src="../_assets/external-link.svg" /></a> solution.</p>
+<p>You need to install <strong>clickhouse-client</strong> software to be able to talk to your new cluster via the Linux terminal:</p>
+<ol>
+<li>
+<p>Open your Linux terminal.</p>
+</li>
+<li>
+<p>Connect to the <a href="https://clickhouse.com/docs/en/getting-started/install/#install-from-deb-packages">ClickHouse official DEB repository <img alt="external link" src="../_assets/external-link.svg" /></a> from your Linux system:</p>
+</li>
+</ol>
+<div class="highlight"><span class="filename">Install the clickhouse-client:</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo apt update <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo apt install -y apt-transport-https ca-certificates dirmngr <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv E0C56BD4 <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">echo</span> <span class="s2">&quot;deb https://repo.clickhouse.tech/deb/stable/main/&quot;</span> <span class="p">|</span> sudo tee <span class="se">\</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>/etc/apt/sources.list.d/clickhouse.list
+</code></pre></div>
+<ol>
+<li>Refresh the package list and install the software:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo apt update <span class="o">&amp;&amp;</span> sudo apt install -y clickhouse-client
+</code></pre></div>
+<ol>
+<li>Test if the installation was successful:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>clickhouse-client --version <span class="c1"># (1)</span>
+</code></pre></div>
+<ol>
+<li>You should see the following message: <code>ClickHouse client version &lt;version number&gt;</code></li>
+</ol>
+<p>The software is ready to go. Let's connect to your new cluster:</p>
+<ol>
+<li>
+<p>Select <strong>Clusters</strong> from the list of services on the left.</p>
+</li>
+<li>
+<p>Select the name of your cluster to open its information page. By default, you will see the <strong>Overview</strong> tab.</p>
+</li>
+<li>
+<p>Under <strong>Connection strings</strong>, find the <strong>Native interface</strong> string and click <strong>Copy</strong>.</p>
+</li>
+<li>
+<p>Paste the string into your Linux terminal and execute it. This string has the following structure:</p>
+</li>
+</ol>
+<div class="highlight"><span class="filename">Native interface string structure:</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>   clickhouse-client --host &lt;FQDN of the host&gt; <span class="se">\</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>                     --secure <span class="se">\</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>                     --user &lt;Cluster user name&gt; <span class="se">\</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>                     --password &lt;Cluster user password&gt; <span class="se">\</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>                     --port <span class="m">9440</span> 
+</code></pre></div>
+<p>You are now connected to your cluster via the <strong>clickhouse-client</strong>. It's time to create the database for you Facebook Ads metrics data. Let's call it <code>Sample-ClickHouse-DB</code>:</p>
+<ol>
+<li>Type the following command in your Linux terminal:</li>
+</ol>
+<div class="highlight"><span class="filename">Creating a ClickHouse database:</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">&quot;Sample-ClickHouse-DB&quot;</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>Test if the database was created successfully. Type <code>SHOW DATABASES</code>. You will see the following readout:</li>
+</ol>
+<p>The database is ready. Now we need to grant the DoubleCloud services access rights.</p>
+<h2 id="transfer-the-data">Transfer the data</h2>
+<p>Now it's time to set up the tools that will get the data from a remote source and transfer it to your <code>Sample-ClickHouse-DB</code> ClickHouse database. To accomplish this, you need to complete the following steps:</p>
+<ul>
+<li><a href="#create-a-source-endpoint">Create a source endpoint.</a></li>
+</ul>
+<p>This is your data receiver. It will connect to a remote source and send the data to your ClickHouse cluster.</p>
+<ul>
+<li><a href="#create-a-target-endpoint">Create a target endpoint</a></li>
+</ul>
+<p>This is your transmitter. It will acquire the data sent by the source endpoint and write it to the database on your ClickHouse cluster.</p>
+<ul>
+<li><a href="#create-and-activate-a-transfer">Create and activate a transfer</a></li>
+</ul>
+<p>This is your data pipeline tool. It will connect your endpoints and ensure the integrity of the data.</p>
+<h3 id="create-a-source-endpoint">Create a source endpoint</h3>
+<ol>
+<li>
+<p>In the list of services, select <strong>{{ data-transfer-name }}</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Endpoints</strong> tab, click <strong>Create endpoint</strong> and select <em>Source</em>.</p>
+</li>
+<li>
+<p>Select <em>S3</em> as the <strong>Source type</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Basic settings</strong>:</p>
+</li>
+<li>
+<p>Enter the <strong>Name</strong> of the endpoint: <code>s3-source-quickstart</code>.</p>
+</li>
+<li>
+<p>(optional) Enter a <strong>Description</strong> of the endpoint.</p>
+</li>
+<li>
+<p>Specify endpoint parameters under <strong>Endpoint settings</strong>:</p>
+</li>
+<li>
+<p>Specify the <strong>Dataset</strong>: <code>bookings</code>.</p>
+</li>
+<li>
+<p>Provide the <strong>Path pattern</strong>: <code>data-sets/*.csv</code>.</p>
+</li>
+<li>
+<p>Auto-infer the <strong>Schema</strong> by typing <code>{}</code>.</p>
+</li>
+<li>
+<p>Select the data <strong>format</strong> - <em>CSV</em>.</p>
+</li>
+<li>
+<p>Under <strong>CSV</strong>, specify the <strong>Delimiter</strong> - <code>;</code>. Keep the rest of the fields with their default values.</p>
+</li>
+<li>
+<p>Under <strong>S3: Amazon Web Services</strong>, enter the name of the <strong>Bucket</strong>: <code>doublecloud-docs</code>. As the bucket is public, leave the rest of the fields blank.</p>
+</li>
+<li>
+<p>Click <strong>Submit</strong>.</p>
+</li>
+</ol>
+<p>The transmitter is ready to go. Now we need to create an endpoint that will receive the data from a remote source.</p>
+<h3 id="create-a-target-endpoint">Create a target endpoint</h3>
+<ol>
+<li>
+<p>In the list of services, select <strong>{{ data-transfer-name }}</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Endpoints</strong> tab, click <strong>Create endpoint</strong> and select <strong>Target</strong>.</p>
+</li>
+<li>
+<p>Select <strong>ClickHouse</strong> as the <strong>Target type</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Basic settings</strong>:</p>
+</li>
+<li>
+<p>Enter the <strong>Name</strong> of the endpoint: <code>clickhouse-target-quickstart</code></p>
+</li>
+<li>
+<p>(optional) Enter a <strong>Description</strong> of the endpoint.</p>
+</li>
+<li>
+<p>Specify endpoint parameters under <strong>Endpoint settings</strong>:</p>
+</li>
+<li>
+<p>Select connection type. In this tutorial, we transfer data to the <strong>Managed cluster</strong>.</p>
+</li>
+<li>
+<p>Specify the connection properties:</p>
+<ul>
+<li>Under <strong>Managed cluster</strong>, paste the <em>ID</em> of your CLickHouse cluster from the <strong>Overview</strong> tab on your cluster's page,</li>
+<li>Specify the <strong>User</strong> of the database: <code>admin</code>,</li>
+<li>Enter the <strong>Password</strong> of the database user,</li>
+<li>Specify the <strong>Database</strong> name you want to transfer the data to: <code>Sample-ClickHouse-DB</code>.</li>
+</ul>
+</li>
+<li>
+<p>Under <strong>Cleanup policy</strong>, select <em>Drop</em>.</p>
+</li>
+<li>
+<p>Leave all the other fields blank or with their default values.</p>
+</li>
+<li>
+<p>Click <strong>Submit</strong>.</p>
+</li>
+</ol>
+<p>Good work. Now we've created an endpoint that will receive and write the data to your ClickHouse database. All we need now is the tool that will connect both endpoints and transfer the data.</p>
+<h3 id="create-and-activate-a-transfer">Create and activate a transfer</h3>
+<ol>
+<li>
+<p>In the list of services, select <strong>{{ data-transfer-name }}</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Create transfer</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Endpoints</strong>:</p>
+</li>
+<li>
+<p>Select <em>s3-source-quickstart</em>  in <strong>Source</strong>.</p>
+</li>
+<li>
+<p>Select <em>clickhouse-target-quickstart</em> in <strong>Target</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Basic settings</strong>:</p>
+</li>
+<li>
+<p>Enter the transfer <strong>Name</strong>: <code>transfer-quickstart</code></p>
+</li>
+<li>
+<p>(optional) Enter the transfer <strong>Description</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Transfer settings</strong>, select the <strong>Transfer type</strong>. In this use case, we select <em>Snapshot</em> to make the transfer process as fast as possible.</p>
+</li>
+<li>
+<p>Leave all the other fields blank or with their default values.</p>
+</li>
+<li>
+<p>Click <strong>Submit</strong>. You will see the following line on your <strong>Transfer</strong> page:</p>
+</li>
+</ol>
+<p><img alt="transfer-ready" src="../_assets/_use-cases/doublecloud-e2e-quickstart/s3-ch-transfer-ready.svg" title="S3 to ClickHouse transfer is ready" /></p>
+<ol>
+<li>
+<p>After you've created a transfer, click <img alt="horizontal-ellipsis" src="../_assets/horizontal-ellipsis.svg" /> → <strong>Activate</strong>.</p>
+</li>
+<li>
+<p>Wait until your transfer status changes to <code>Done</code>.</p>
+</li>
+<li>
+<p>Check the data transferred to your ClickHouse database:</p>
+</li>
+<li>
+<p>Open your Linux Terminal.</p>
+</li>
+<li>
+<p>Connect to your cluster with the <strong>Native interface string</strong> from your cluster's <strong>Overview</strong> tab and type the following command:</p>
+</li>
+</ol>
+<div class="highlight"><span class="filename">Listing tables from the database:</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">TABLES</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">&quot;Sample-ClickHouse-DB&quot;</span><span class="w"></span>
+</code></pre></div>
+<p>Nice work! You have all the data transferred from a remote source and replicated with complete integrity in your own ClickHouse database. Now let's make this data earn its worth.</p>
+<h2 id="visualize-the-data">Visualize the data</h2>
+<p>After you have migrated the data from to your ClickHouse cluster, it's time to start building data displays. This process consists of the following steps:</p>
+<ol>
+<li><a href="#create-a-workbook">Create a workbook</a>.</li>
+</ol>
+<p>In Visualization it works as a container for all other visualization elements.</p>
+<ol>
+<li><a href="#create-a-connection">Create a connection</a></li>
+</ol>
+<p>This tool connects to your ClickHouse cluster to fetch and update the data.</p>
+<ol>
+<li>
+<p><a href="#create-datasets">Create datasets</a> based on the data from your connection and <a href="#prepare-datasets-for-visualization">prepare them for visualization</a>.</p>
+</li>
+<li>
+<p><a href="#add-a-dashboard">Add a dashboard</a></p>
+</li>
+</ol>
+<p>This tool provides a canvas on which to place and organize charts.</p>
+<ol>
+<li>
+<p><a href="#create-tabs">Create tabs</a> to organize related data into groups.</p>
+</li>
+<li>
+<p><a href="#create-charts">Create charts</a> to visualize you data.</p>
+</li>
+</ol>
+<h3 id="create-a-workbook">Create a workbook</h3>
+<p>Workbooks are visualization environments for data in your clusters.</p>
+<ol>
+<li>
+<p>Go to the <a href="{{ console-link }}">console</a>.</p>
+</li>
+<li>
+<p>Select <strong>Visualization</strong> from the list of services on the left.</p>
+</li>
+<li>
+<p>Click <strong>Create a workbook</strong> in the upper-right corner of the page.</p>
+</li>
+<li>
+<p>Name you workbook <code>Booking Demo Workbook</code> and click <strong>Create</strong>.</p>
+</li>
+</ol>
+<p>You will see the following line on your list of workbooks:</p>
+<p><img alt="workbook-ready" src="../_assets/_use-cases/doublecloud-e2e-quickstart/booking-demo-workbook.svg" title="Workbook is ready" /></p>
+<h3 id="create-a-connection">Create a connection</h3>
+<p>Connections access hosts in your cluster to fetch data for processing and visualization.</p>
+<ol>
+<li>
+<p>Click <strong>Create</strong> → <strong>Connection</strong> in the upper-right corner of your workbook page.</p>
+</li>
+<li>
+<p>Select <strong>ClickHouse</strong>.</p>
+</li>
+<li>
+<p>Specify the connection parameters:</p>
+<ul>
+<li>
+<p><strong>Connection name</strong>. Let's call it <code>Sample ClickHouse DB</code>.</p>
+</li>
+<li>
+<p><strong>Hostname</strong>. Copy the name of a host from the <strong>Hosts</strong> tab on the information page of your cluster.</p>
+</li>
+<li>
+<p><strong>HTTP Interface Port</strong> (by default, <code>8443</code>).</p>
+</li>
+<li>
+<p><strong>Username</strong> and <strong>Password</strong> from the <strong>Overview</strong> tab on the information page of your cluster.</p>
+</li>
+<li>
+<p>Under <strong>Raw SQL level</strong> keep the default setting - <em>Forbid</em>. This way the service will handle all SQL queries automatically.</p>
+</li>
+<li>
+<p>Check the <strong>HTTPS</strong> box to enable this security layer.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>Your connection parameters should look like this:</p>
+<p><img alt="workbook-connection-form" src="../_assets/_use-cases/doublecloud-e2e-quickstart/workbook-connection-form.svg" title="Workbook connection is ready" /></p>
+<ol>
+<li>Click <strong>Check connection</strong>.</li>
+</ol>
+<p>If your connection is operational, you will see a green icon. If there is a problem, a red icon and a popup message with information about the error will appear.  </p>
+<ol>
+<li>Click <strong>Create</strong> in the upper-right corner of the page.</li>
+</ol>
+<p>If your connection is created correctly, you'll see this line under <strong>Connections</strong> on your workbook page:</p>
+<p><img alt="connection-ready" src="../_assets/_use-cases/doublecloud-e2e-quickstart/workbook-connection-ready.svg" title="Workbook connection is ready" /></p>
+<h3 id="create-a-dataset">Create a dataset</h3>
+<p>Datasets process data from your connections and prepare them for visualization.</p>
+<p>Based on our tutorial, create one or more datasets:</p>
+<ol>
+<li>
+<p>Click <strong>Create</strong> → <strong>Dataset</strong> in the upper-right corner of your workbook page.</p>
+</li>
+<li>
+<p>In the <strong>Connections</strong> section, click <strong>+ Add</strong> and select <code>Sample ClickHouse DB</code>. You will see the list of tables that can be visualized in the <strong>Tables</strong> section.</p>
+</li>
+<li>
+<p>Drag and drop the table to the workspace on the right.</p>
+</li>
+<li>
+<p>You can see the preview of the dataset in the <strong>Preview</strong> section below.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong> in the upper-right corner of your dataset page.</p>
+</li>
+<li>
+<p>Enter the name for your new dataset: <code>Bookings Dataset</code>.</p>
+</li>
+<li>
+<p>Return to your workbook page by clicking <code>Booking Demo Workbook</code> in the breadcrumbs section in the top left corner of the page.</p>
+</li>
+</ol>
+<h3 id="prepare-your-dataset-for-visualization">Prepare your dataset for visualization</h3>
+<p>Use <a href="data-visualization/concepts/calculated-fields.md">calculated fields</a> and aggregation to extract more value from your data.</p>
+<ol>
+<li>
+<p>Open your <strong>Workbook</strong>.</p>
+</li>
+<li>
+<p>Select the <code>Bookings Dataset</code>.</p>
+</li>
+</ol>
+<p>Let's take a look at the list of fields we've got here. The first column is <em>Row num</em> - this isn't the best option for a sorting field.</p>
+<p>What's the best sorting parameter for a bookings dataset? It should be some sort of time indicator. But let's not make our time period too short - it shouldn't be days or months. Let's make it years.</p>
+<p>Where do we take the year value from? Let's look at the dataset again. There is the <em>Booking start</em> field. But it's a timestamp with the standard <code>YYYY-MM-DD</code> structure.</p>
+<ol>
+<li>
+<p>Create a calculated field to extract the year number from this data column:</p>
+</li>
+<li>
+<p>Click <strong>+ Add</strong> button in the top right to create a calculated field.</p>
+</li>
+<li>
+<p>Under <strong>Field settings</strong> specify the name for the field: <code>YEAR</code>.</p>
+</li>
+<li>
+<p>Use the <a href="data-visualization/function-ref/YEAR.md">YEAR</a> function in the formula:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">YEAR</span><span class="p">([</span><span class="n">Booking</span><span class="w"> </span><span class="k">Start</span><span class="p">])</span><span class="w"></span>
+</code></pre></div>
+</li>
+<li>
+<p>Click <strong>Create</strong> in the lower-right corner.</p>
+<p>You will see your new calculated field on top of the dataset field list, it will have <img alt="formula" src="../_assets/formula.svg" /> icon in the <strong>Field source</strong> column:</p>
+<p><img alt="calculated-field-year" src="../_assets/_use-cases/doublecloud-e2e-quickstart/calculated-field_year.svg" title="Calculated field is ready" /></p>
+</li>
+<li>
+<p>Hide the <em>Row num</em> column, since we won't use it:</p>
+<ol>
+<li>
+<p>Hover the cursor over <code>Row num</code> in the list of dataset fields.</p>
+</li>
+<li>
+<p>Click the <img alt="icon-hide" src="../_assets/crossed-eye.svg" /> icon.</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>The field is now hidden and will be unavailable for visualization. To check that you've done this correctly, look if the field disappeared from the <strong>Preview</strong> section of the dataset.</p>
+<ol>
+<li>Apply aggregation to extract more value from data columns:</li>
+</ol>
+<p>Look at the <em>Bookings count</em> column. Every row in it has the same value - <code>1</code>. How can we make it more useful? Let's count the number of bookings:</p>
+<ol>
+<li>
+<p>Open the drop-down menu in the <strong>Aggregation</strong> column (it should have a value of <code>No</code> and the aggregation type should have a green background).</p>
+</li>
+<li>
+<p>Select <em>Count</em>. The data column will now return the number of rows it contains, the aggregation type background will change to blue:</p>
+<p><img alt="aggregation-count" src="../_assets/_use-cases/doublecloud-e2e-quickstart/dataset-aggregation-count.svg" title="Workbook connection is ready" /></p>
+</li>
+<li>
+<p>Look at the column names with <code>Sum</code> in them. Apply the <em>Sum</em> aggregation type to these fields - they will now return the sum of values.</p>
+</li>
+<li>
+<p>Apply the <em>Average</em> aggregation type to the columns with <code>avg</code> in their names - they will return the average value now.</p>
+</li>
+<li>
+<p>Apply the <em>Number of unique</em> type to the <code>Hosts count</code> field - it will return a number of unique values in it.</p>
+</li>
+</ol>
+<p>Your dataset fields should now look like this:</p>
+<p><img alt="dataset-aggregation-ready" src="../_assets/_use-cases/doublecloud-e2e-quickstart/dataset-aggregated-fields.svg" title="Dataset aggregation is complete" /></p>
+<ol>
+<li>Click <strong>Save</strong> in the upper-right corner of the dataset page to save changes.</li>
+</ol>
+<p>Now the data is ready for visualization. Let's get right to it.</p>
+<h2 id="create-a-dashboard">Create a dashboard</h2>
+<p>A dashboard is a customizable data display that provides you with capabilities to create and arrange charts and selectors.</p>
+<ol>
+<li>
+<p>Click <strong>Create</strong> → <strong>Dashboard</strong> in the upper-right corner of your workbook page.</p>
+</li>
+<li>
+<p>Call it <code>Booking Dashboard</code> and click <strong>Create</strong>.</p>
+</li>
+</ol>
+<p>Your dashboard will open in edit mode. You're ready to start populating it with tabs and charts:</p>
+<p><img alt="emtpy-dashboard" src="../_assets/_use-cases/doublecloud-e2e-quickstart/workbook-dashboard-edit.svg" title="Dashboard in edit mode" /></p>
+<h3 id="create-charts-and-selectors">Create charts and selectors</h3>
+<p>To get you familiar with the most popular chart types in DoubleCloud Visualization, we'll create the following:</p>
+<ul>
+<li>
+<p><a href="#create-and-area-chart">Area chart</a></p>
+</li>
+<li>
+<p><a href="#create-a-bar-chart">Bar chart</a></p>
+</li>
+<li>
+<p><a href="#create-an-indicator">Indicator</a></p>
+</li>
+</ul>
+<p>We will also add selectors to work as filters for your data visualizations.</p>
+<h3 id="create-an-area-chart">Create an area chart</h3>
+<p>An <strong>Area chart</strong> is good at visualizing value changes over a period of time.</p>
+<ol>
+<li>
+<p>Click <strong>Add</strong> → <strong>Chart</strong>.</p>
+</li>
+<li>
+<p>Select <em>Bookings Dataset</em> from the list.</p>
+</li>
+<li>
+<p>Click the chart type field on the right of the dataset section and select <em>Area chart</em> from the drop-down list.</p>
+</li>
+<li>
+<p>Drag and drop <strong>Measures</strong> and <strong>Dimensions</strong> to the appropriate sections of the chart:</p>
+</li>
+<li>
+<p><code>YEAR</code> to <strong>X</strong> - this provides the timeline over which the data was changing.</p>
+</li>
+<li>
+<p><code>Price sum</code> to <strong>Y</strong> - this is the value the changes of which we're going to visualize.</p>
+</li>
+</ol>
+<p>Your chart fields configuration should look like this:</p>
+<p><img alt="dashboard-area-chart-fields" src="../_assets/_use-cases/doublecloud-e2e-quickstart/dashboard-area-chart-fields.svg" title="Area chart fields configuration" /></p>
+<ol>
+<li>
+<p>Now let's change the boring default blue color of the chart into something with a bit more zest:</p>
+</li>
+<li>
+<p>Hover your cursor over the <strong>Colors</strong> field and click the <img alt="gear-icon" src="../_assets/gear.svg" title="Gear icon" /> icon.</p>
+</li>
+<li>
+<p>In the popup window, select a different color for the <code>Price sum</code> field:</p>
+<p><img alt="chart-color-settings" src="../_assets/_use-cases/doublecloud-e2e-quickstart/dashboard-chart-color-settings.svg" title="Chart color settings" /></p>
+</li>
+<li>
+<p>Click <strong>Apply</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong> in the upper-right corner of the page.</p>
+</li>
+<li>
+<p>Let's call our chart <code>Price</code> and click <strong>Done</strong>.</p>
+</li>
+<li>
+<p>Choose the right location for your chart by dragging it around and resize it to your liking.</p>
+</li>
+</ol>
+<details class="success" open="open">
+<summary>Additional Area chart practice</summary>
+<p>If you want to practice creating area charts a bit more, create a similar chart, but make it about <strong>Average price</strong> - choose the <code>Price avg</code> field for your <strong>Y</strong> field.</p>
+</details>
+<h3 id="create-a-bar-chart">Create a bar chart</h3>
+<p>A <strong>Bar chart</strong> allows you to compare the same parameter between several categories. For instance, we'd like to know the number of bookings in each borough and compare them at a glance. Let's make it happen:</p>
+<ol>
+<li>
+<p>Click <strong>Add</strong> → <strong>Chart</strong>.</p>
+</li>
+<li>
+<p>Select <em>Bookings Dataset</em> from the list.</p>
+</li>
+<li>
+<p>Click the chart type field on the right of the dataset section and select <em>Bar chart</em> from the drop-down list.</p>
+</li>
+<li>
+<p>Drag and drop <strong>Measures</strong> and <strong>Dimensions</strong> to the appropriate sections of the chart:</p>
+</li>
+<li>
+<p><code>Borough</code> to <strong>Y</strong> - these are our categories.</p>
+</li>
+<li>
+<p><code>Bookings count</code> to <strong>X</strong> - this is the parameter we want to compare between the categories.</p>
+</li>
+<li>
+<p><code>Borough</code> to <strong>Colors</strong> - this will paint horizontal bars in different colors to make the chart easier to read.</p>
+</li>
+<li>
+<p><code>Bookings count</code> to <strong>Signatures</strong> - this will write the numeric value inside the bar.</p>
+</li>
+</ol>
+<p>Your chart fields configuration should look like this:</p>
+<p><img alt="dashboard-bar-chart-fields" src="../_assets/_use-cases/doublecloud-e2e-quickstart/dashboard-bar-chart-fields.svg" title="Dashboard Bar chart fields" /></p>
+<ol>
+<li>
+<p>Let's call our chart <code>Bookings by Borough</code> and click <strong>Done</strong>.</p>
+</li>
+<li>
+<p>Choose the right location for your chart by dragging it around and resize it to your liking.</p>
+</li>
+</ol>
+<details class="success">
+<summary>Aditional Bar chart practice</summary>
+<p>If you want to practice creating bar charts, create a similar chart, but make it about <strong>Price sum</strong> - choose the <code>Price sum</code> field for your <strong>X</strong> and <strong>Signature</strong> fields.</p>
+</details>
+<h3 id="create-an-indicator">Create an indicator</h3>
+<p>An <strong>indicator</strong> shows a numeric value or a sum of values in large letters.</p>
+<ol>
+<li>
+<p>Click <strong>Add</strong> → <strong>Chart</strong>.</p>
+</li>
+<li>
+<p>Select <em>Bookings Dataset</em> from the list.</p>
+</li>
+<li>
+<p>Click the chart type field on the right of the dataset section and select <em>Indicator</em> from the drop-down list.</p>
+</li>
+<li>
+<p>Drag and drop <code>Hosts Count</code> to the <strong>Measure</strong> field.</p>
+</li>
+</ol>
+<p>Your chart fields configuration should look like this:</p>
+<p><img alt="dashboard-indicator-fields" src="../_assets/_use-cases/doublecloud-e2e-quickstart/dashboard-indicator-fields.svg" title="Dashboard indicator fields" /></p>
+<ol>
+<li>
+<p>Let's customize the appearance of our indicator:</p>
+</li>
+<li>
+<p>Hover your cursor over the <strong>Measure</strong> field and click the <img alt="gear-icon" src="../_assets/gear.svg" title="Gear icon" /> icon.</p>
+</li>
+<li>
+<p>In the popup window, select the <code>S</code> size and choose a different color:</p>
+</li>
+</ol>
+<p><img alt="dashboard-indicator-settings" src="../_assets/_use-cases/doublecloud-e2e-quickstart/dashboard-indicator-settings.svg" title="Dashboard indicator settings" /></p>
+<ol>
+<li>
+<p>Click <strong>Apply</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong> in the upper-right corner of the page.</p>
+</li>
+<li>
+<p>Let's call our chart <code>Hosts Count Indicator</code> and click <strong>Done</strong>.</p>
+</li>
+</ol>
+<details class="success">
+<summary>Additional Indicator practice</summary>
+<p>If you want to practice creating indicators, create a similar chart, but choose the <code>Bookings count</code> field for your <strong>Measure</strong> field and select a different color for the numbers.</p>
+</details>
+<h3 id="add-a-selector">Add a selector</h3>
+<p>Selectors can work as filters for your charts and give you additional analytical flexibility.</p>
+<ol>
+<li>
+<p>Click <strong>Add</strong> → <strong>Selector</strong>.</p>
+</li>
+<li>
+<p>From <strong>Dataset</strong>, select <em>Bookings dataset</em>.</p>
+</li>
+<li>
+<p>From <strong>Fields</strong>, select <em>Property Type</em>.</p>
+</li>
+<li>
+<p>In the <strong>Selector type</strong> field, keep <em>List</em>.</p>
+</li>
+<li>
+<p>Toggle <strong>Multiple choice</strong> on.</p>
+</li>
+<li>
+<p>Set the <em>Belongs to a set</em> <strong>Operation</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Title field</strong>, enter <code>Property type</code>.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong></p>
+</li>
+</ol>
+<p>Now you can filter your charts by one or more property types. Give it a try.</p>
+<p>{% note tip %}</p>
+<p>If you want to practice creating selectors, create a similar one, but choose <code>Borough</code> for <strong>Title field</strong>.</p>
+<p>{% endnote %}</p>
+<p>After you've completed working with charts, click <strong>Save</strong> in the upper-right corner of the page to save the changes to the dashboard.</p>
+<p>Below you can see a tab with sample data and layout:</p>
+<p><img alt="sample-dashboard" src="../_assets/_use-cases/doublecloud-e2e-quickstart/dashboard-sample.svg" title="Workbook connection is ready" /></p>
+<p>{% note tip "Add a sample dashboard to any project" %}</p>
+<p>You can add this sample dashboard to any of your projects - click <strong>Add demo workbook</strong> in the upper-right corner of your <strong>All workbooks</strong> page.</p>
+<p>{% endnote %}</p>
+<p>This concludes the tutorial. There's a lot more you can do with DoubleCloud. Keep exploring!</p>
+<p><strong>See also</strong>:</p>
+<p>Managed ClickHouse:</p>
+<ul>
+<li><a href="managed-clickhouse/step-by-step/cluster-db-connect.md">Connect to a ClickHouse database</a></li>
+</ul>
+<p>{{ data-transfer-name }}:</p>
+<ul>
+<li><a href="transfers/step-by-step/manage-a-source-endpoint.md">Manage a source endpoint</a></li>
+<li><a href="transfers/step-by-step/manage">Manage a target endpoint</a></li>
+<li><a href="transfers/step-by-step/manage-a-transfer.md">Manage a transfer</a></li>
+</ul>
+<p>Visualization:</p>
+<ul>
+<li><a href="data-visualization/step-by-step/work-with-datasets.md">Work with datasets</a></li>
+<li><a href="data-visualization/step-by-step/work-with-charts.md">Work with charts</a></li>
+<li><a href="data-visualization/function-ref/all.md">Visualization functions reference</a></li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Welcome to MkDocs" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Welcome to MkDocs
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.indexes", "navigation.instant", "navigation.tracking"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      
+    
+  </body>
+</html>
